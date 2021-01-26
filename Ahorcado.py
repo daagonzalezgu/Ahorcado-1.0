@@ -62,11 +62,21 @@ def seleccionar_palabra(palabras):
 
 #Dibujar tablero
 def display(tablero,palabra_secreta, letra_correcta, letra_incorrecta):
-     print(tablero[len(palabra_incorrecta)])
+     #Muestra el tablero con el ahorcado
+     print(tablero[len(letra_incorrecta)])
+     #Muestra las letras incorrectas hasta el momento
+     print('Letras incorrectas: ', ' ')
+     for letra in letra_incorrecta:
+          print(letra,' ')
      
 
 
-#pedir una letra 
+palabra_secreta = seleccionar_palabra(palabras)
+letra_correcta = []
+letra_incorrecta = ['a','b','c','d']
+display(tablero,palabra_secreta,letra_correcta,letra_incorrecta)
+
+pedir una letra 
 def dar_letra():
      letra = str(input())
 #buscar la letra
@@ -93,4 +103,3 @@ while True:
           
      #Fin del juego ?
      #Preguntar si jugar de nuevo
-
